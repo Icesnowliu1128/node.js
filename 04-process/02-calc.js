@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const log=console.log,
+      arg=process.argv[2];
+
+if(typeof(arg)==='undefined'||
+    arg==='--help'||
+    arg==='-h'){
+      help();
+    }else{
+      calc();
+    }
+
+function help(){
+  const msg=''
+    +'usage:cmd-name [OPTION][expression]\n'
+    +'evaluate the expresion.\n'
+    +'\n'
+    +'Mandatory arguments to long options are mandatory for short options too.\n'
+    +'  -h, --help ourput help information and exit\n';
+
+  log(msg);
+}
+
+function calc(){
+  try{
+    log(`${arg}=${eval(arg)}`);
+  }catch(e){
+    console.error(`${arg}不是合法的数学表达式！`);
+  }
+}
