@@ -2,22 +2,22 @@
 
 const log=console.log;
 
-log(`file name:$(_filename)`);
-log(`dir name:$(_dirname)`);
+log(`file name:${__filename}`);
+log(`dir name:${__dirname}`);
 
-let fileName=_dirname+'/view/view.html';
+let fileName=__dirname+'/view/view.html';
 
 //方案2：不好，代码复杂，平台考虑不全面
 switch(process.platform){
   case 'linux':
-    fileName=_dirname+'/views/view.html';
+    fileName=__dirname+'/views/view.html';
     break;
 
   case 'win32':
-    fileName=_dirname+'\\views\\view.html';
+    fileName=__dirname+'\\views\\view.html';
     break;
 
-  _dirnamefault:
+  default:
     fileName='something wrong';
 }
 
@@ -26,5 +26,5 @@ log(`fileName:${fileName}`);
 //方案三：最佳
 const path=require('path');
 
-fileName=path.jion(_dirname,'views','login.html');
+fileName=path.jion(__dirname,'views','login.html');
 log('fileName:',fileName);

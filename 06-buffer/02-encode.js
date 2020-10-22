@@ -9,7 +9,7 @@ if(process.argv.length!==4){
   process.exit(1);
 }
 
-log('user name: %s \n password: %s',user,pwd);
+log('user name: %s \n password: %s',usr,pwd);
 
 const buf=new Buffer(usr+':'+pwd);
 

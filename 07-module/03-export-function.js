@@ -15,7 +15,7 @@ module.exports=(radius)=>{
     return pi*radius*radius;
   }
 
-  reutrn{
+  return{
     area,
     diameter,
     circumference

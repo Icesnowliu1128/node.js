@@ -6,7 +6,7 @@ const width=16,
       height=16;
 
 let pixelByteSize=width*height*4;
-let totaSize=pixelByteSize+54;
+let totalSize=pixelByteSize+54;
 
 let buf=new Buffer(totalSize);
 
@@ -29,8 +29,10 @@ for(let i=54;i<totalSize;i+=4){
 }
 
 fs.writeFile('./out.bmp',buf,(err)=>{
-  if(err1!=null){
+  if(err!=null){
     console.error(err);
     process.exit(1);
   }
-})
+}
+);
+

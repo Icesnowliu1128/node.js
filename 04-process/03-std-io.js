@@ -6,10 +6,10 @@ const log=console.log,
 
 let me={},i=1;
 
-stdout.write{msg[0]+': '};
+stdout.write(msg[0]+': ');
 
 stdin.on('data',(data)=>{
-  me[msg[i-1]]=data.slice(0,data,length-1).toString('UTF-8');
+  me[msg[i-1]]=data.slice(0,data.length-1).toString('UTF-8');
   if(i===4){
     log(me);
     process.exit();

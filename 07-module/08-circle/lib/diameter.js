@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-mosule.exports=(radius)=>2*radius;
+module.exports=(radius)=>2*radius;

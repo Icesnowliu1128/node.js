@@ -11,4 +11,4 @@ process.on('SIGINT',()=>{
 
 process.on('SIGTSP',()=>{
   log('You have pressed Ctrl + Z.');
-})
+});

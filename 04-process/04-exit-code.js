@@ -4,7 +4,7 @@ const log=console.log,
       err=console.error,
       arg=process.argv;
 
-if(typeeof(arg)==='undefined'){
+if(typeof(arg)==='undefined'){
   err('缺少命令行参数！');
   process.exit(1);
 }

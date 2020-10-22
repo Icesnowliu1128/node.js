@@ -6,9 +6,9 @@ const circle=require('./05-export-object.js'),
       green=chalk.greenBright;
 
 log(green('------------------------'));
-log(green('area:\t${circle.area(20)}'));
-log(green('diameter:\t${circle.diameter(20)}'));
-log(greem('circumference:\t${circle.circumference(20)}'));
+log(green(`area:\t${circle.area(20)}`));
+log(green(`diameter:\t${circle.diameter(20)}`));
+log(green(`circumference:\t${circle.circumference(20)}`));
 log(green('------------------------------------'));
 
 log(module);

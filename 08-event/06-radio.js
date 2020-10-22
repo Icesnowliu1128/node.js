@@ -12,15 +12,15 @@ let Radio=function(station){
     emit('stop',station);
   },5000);
 
-  function emit(evit,arg){
-    if(typeof(_listeners[evt]==='undefined')){
+  function emit(evt){
+    if(typeof(_listeners[evt])==='undefined'){
       console.error('Error:%s not defined!',evt);
-       process.exit(1);
+      process.exit(1);
     }
 
-     _listeners[evt].forEach((fn)=>{
-       fn.call(this.arg);
-     });
+    _listeners[evt].forEach((fn)=>{
+      fn.call(this.arg);
+    });
   }
 
   this.on=(evt,fn)=>{

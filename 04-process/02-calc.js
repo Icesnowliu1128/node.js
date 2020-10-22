@@ -6,10 +6,10 @@ const log=console.log,
 if(typeof(arg)==='undefined'||
     arg==='--help'||
     arg==='-h'){
-      help();
-    }else{
-      calc();
-    }
+  help();
+}else{
+  calc();
+}
 
 function help(){
   const msg=''

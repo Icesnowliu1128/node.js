@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-constpi=Math.PI;
+const pi=Math.PI;
 
 module.export.diameter=(radius)=>2*radius;
 module.exports.circumference=(radius)=>pi*2*radius;

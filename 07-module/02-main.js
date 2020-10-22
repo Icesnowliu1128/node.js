@@ -6,7 +6,7 @@ const pi=require('./02-export-var'),
       green=chalk.greenBright;
 
 log(green('-----------'));
-log(green('PI:${PI}'));
+log(green(`PI:${pi}`));
 log(green('-----------'));
 
 log(module);

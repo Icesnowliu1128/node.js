@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const log=sonsole.log;
+const log=console.log;
 
 var timer1,timer2,count=1;
 

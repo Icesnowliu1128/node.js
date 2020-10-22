@@ -8,9 +8,9 @@ const circle=require('./03-export-function'),
 var c=circle(20);
 
 log(green('-------------------------------------'));
-log(green('area:     \t${c.area()}'));
-log(green('diameter: \t${c.diameter()} '));
-log(green('circumference:\t${c.circumference()}'));
+log(green(`area:     \t${c.area()}`));
+log(green(`diameter: \t${c.diameter()} `));
+log(green(`circumference:\t${c.circumference()}`));
 log(green('-------------------------------------'));
 
 log(module);

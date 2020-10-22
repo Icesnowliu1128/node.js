@@ -13,9 +13,9 @@ log(`group id:${process.getgid}`);
 log(`ced:${process.cwd}\n`);
 
 log(`rss:${process.memoryUsage().res}`);
-log(`heapTotal:${process.memoryUsage(.heapTotal)}`);
+log(`heapTotal:${process.memoryUsage().heapTotal}`);
 log(`heapUsed:${process.memoryUsage().heapUsed}\n`);
-log(`external:${process.memoryUsage(.external)}`);
+log(`external:${process.memoryUsage().external}`);
 
 log('env:');
 log(process.env);

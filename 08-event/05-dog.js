@@ -2,13 +2,13 @@
 
 
 function Dog(name,energy){
-
   let _listeners={
-   // 'evnet1':[_listener1,_listener2,...],//event:事件名称；listener:回调函数
-   // 'event2':[]
+    // 'evnet1':[_listener1,_listener2,...],
+    // event:事件名称；listener:回调函数
+    // 'event2':[]
   };
-    this.name=name,
-    this.energy=energy;
+  this.name=name,
+  this.energy=energy;
 
   let timer=setInterval(()=>{
     if(energy>0){    
@@ -29,11 +29,11 @@ function Dog(name,energy){
     _listeners[evt].push(fn);
   };
 
-  function emit(evt,arg){
+  function emit(evt){
     if(typeof(_listeners[evt])==='undefined'){
       console.error('Error: %s not defined!');
       process.exit(1);      
-     }
+    }
 
     _listeners[evt].forEach((fn)=>{
       fn.call(this.arg);
