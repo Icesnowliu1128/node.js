@@ -7,9 +7,9 @@ const http=require('https'),
       addr='https://ke.sifou.com/free';
 
 http.get(addr,(res)=>{
-  let data="";
+  let data='';
 
-  res.on('data',(chunk)=>data+=chunk)
+  res.on('data',(chunk)=>data+=chunk);
   res.on('end',()=>{
     let $=cheerio.load(data);
     let courses=$('body').find('h5.card-title>a');
@@ -20,7 +20,7 @@ http.get(addr,(res)=>{
       log();  
       //log(courses[i]).html().toString('utf8');
     }
-  })
+  });
 });
 
 
